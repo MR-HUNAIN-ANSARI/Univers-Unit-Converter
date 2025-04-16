@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Universal Unit Converter</h1>
+            <p>Convert between different types of units</p>
+        </header>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="general">General</button>
+            <button class="tab-btn" data-category="fabric">Fabric & Paper</button>
+            <button class="tab-btn" data-category="metal">Metal & Engineering</button>
+            <button class="tab-btn" data-category="plastic">Plastic & Packaging</button>
+            <button class="tab-btn" data-category="construction">Construction & Wood</button>
+        </div>
+
+        <div class="converter-section">
+            <div class="converter-select">
+                <label for="converter-type">Select Converter:</label>
+                <select id="converter-type"></select>
+            </div>
+
+            <div class="conversion-box">
+                <div class="input-group">
+                    <input type="number" id="from-value" placeholder="Enter value">
+                    <select id="from-unit"></select>
+                </div>
+                
+                <div class="equals">=</div>
+                
+                <div class="input-group">
+                    <input type="number" id="to-value" readonly>
+                    <select id="to-unit"></select>
+                </div>
+            </div>
+
+            <button id="convert-btn">Convert</button>
+
+            <div class="formula-box">
+                <p>Formula: <span id="formula-text">Select units to see formula</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
